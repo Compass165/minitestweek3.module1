@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isPrime(number) {
+        number = document.getElementById("nhapSo").value;
+        let result;
+        if (number < 2) {
+            document.write(number + "không là snt")
+        }
+        for (let i = 2; i <= number; i++) {
+            let check = false;
+            if (number % i == 0) {
+                check = false
+            } else {
+                check = true
+                result = document.write(number + " la so nguyen to")
+            }
+
+            document.getElementById("result").innerHTML = result
+        }
+    }
+
+</script>
+</html>
