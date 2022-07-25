@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra các số chẵn trong mảng</title>
+</head>
+<body>
+<p>
+    <button id="push" onclick="pushIn()">Bắt đầu nhập mảng</button>
+</p>
+<p>Mảng = [<span id="arrayIs"></span>]</p>
+<button onclick="checkEven()">check</button>
+</body>
+
+<script>
+
+    function pushIn() {
+        let length = +prompt("Mời bạn nhập số lượng phần tử của mảng: ");
+        arr = getElement(length);
+        document.getElementById("arrayIs").innerHTML = arr;
+    }
+    function getElement (number) {
+        arr = new Array(number);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = +prompt("Nhập phần tử thứ: " + i + "vào ")
+        }
+        return arr;
+    }
+    function checkEven () {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]%2==0) {
+                document.write("Số chẵn là: "+ arr[i] +"<br>")
+            }
+        }
+    }
+
+</script>
+</html>
